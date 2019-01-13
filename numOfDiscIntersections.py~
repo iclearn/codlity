@@ -1,0 +1,23 @@
+# you can write to stdout for debugging purposes, e.g.
+# print("this is a debug message")
+
+def solution(A):
+    # write your code in Python 3.6
+    s = []
+    e = []
+    for i in range(len(A)):
+        print(i)
+        s += i-A[i]
+        e += i+A[i]
+    print(s)
+    print(e)
+    l = max(e) - min(s)
+    print(l)
+    sort(s)
+    sort(e)
+    
+    cur_circles = 0
+    cur_intersections = 0
+    
+    for i in range(len(A)):
+        
